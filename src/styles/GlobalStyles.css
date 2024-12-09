@@ -1,0 +1,102 @@
+/* Reset some basic elements for a clean slate */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles for the body 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+*/
+/* Styles for container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+
+
+
+
+/* Footer styles
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+   align-self: baseline;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+ */
+/* Main content styles */
+.main-content {
+    padding: 20px;
+}
+
+/* Post card styles */
+.post-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Comment section styles */
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.comment-section button {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-section .comments-list {
+    margin-top: 20px;
+}
+
+.comment-section .comment {
+    background: #ebd6d6;
+    padding: 10px;
+    color: black;
+    margin-bottom: 10px;
+    border-left: 3px solid #333;
+}

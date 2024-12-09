@@ -1,0 +1,44 @@
+{
+  "name": "my-blog-website",
+  "version": "1.0.0",
+  "description": "A blogging website where you can create and publish blogs.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start --openssl-legacy-provider",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "author": "Abhishek Bijalwan",
+  "license": "MIT",
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^43.3.1",
+    "@ckeditor/ckeditor5-react": "^9.4.0",
+    "axios": "^1.7.8",
+    "bcryptjs": "^2.4.3",
+    "dompurify": "^3.2.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "npm": "^10.9.2",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^9.0.1",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^7.0.2",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000"
+}

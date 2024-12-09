@@ -1,0 +1,10 @@
+.draggable-image {
+    display: block;
+    margin: 0 auto;
+    cursor: move;
+    border: 1px dashed #2d3436; /* Border for clarity during dragging */
+}
+
+.draggable-image.dragging {
+    opacity: 0.5; /* Reduce opacity while dragging for visual feedback */
+}

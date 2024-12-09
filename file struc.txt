@@ -1,0 +1,56 @@
+my-blog-website/
+├── public/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── css/
+│   ├── favicon.ico
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Header/
+│   │   │   └── Header.js
+│   │   ├── Footer/
+│   │   │   └── Footer.js
+│   │   ├── SearchBar/
+│   │   │   └── SearchBar.js
+│   │   ├── PostCard/
+│   │   │   └── PostCard.js
+│   │   ├── CommentSection/
+│   │   │   └── CommentSection.js
+│   │   ├── About/
+│   │   │   └── About.js
+│   │   ├── Contact/
+│   │   │   └── Contact.js
+│   │   └── SEO/
+│   │       └── SEO.js
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── Blog.js
+│   │   ├── About.js
+│   │   ├── Contact.js
+│   │   └── Post.js
+│   ├── data/
+│   │   └── posts.json
+│   ├── styles/
+│   │   ├── GlobalStyles.css
+│   │   └── variables.css
+│   ├── utils/
+│   │   └── seo.js
+│   ├── App.js
+│   ├── index.js
+│   └── routes.js
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   ├── models/
+│   │   └── Post.js
+│   ├── routes/
+│   │   ├── postRoutes.js
+│   ├── controllers/
+│   │   ├── postController.js
+│   ├── server.js
+│   └── package.json
+├── package.json
+├── README.md
+└── .gitignore
+npm install react react-dom react-router-dom react-scripts react-helmet

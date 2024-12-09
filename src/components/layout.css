@@ -1,0 +1,234 @@
+.header {
+    background-color: #e7f8f2;
+    color: #000000;
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
+    justify-content: space-between; /* Distribute space evenly */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.header h1 {
+    margin-left: 20px;
+    font-size: 24px;
+    color: #000000;
+     /* Allow flexible sizing */
+}
+
+.ss {
+    display: block;
+    border: 4px double aqua;
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    flex: 2; /* Allow flexible sizing */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+}
+nav ul li a:hover{
+  color:black;
+  font-weight: 600;
+}
+
+.search-bar { /* Assuming SearchBar component is using this class */
+    flex: 2; /* Allow flexible sizing */
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .ss {
+        margin: 10px 0;
+    }
+}
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: #faf7f7;
+    padding: 20px 10px; 
+    text-align: center;
+    font-size: 14px;
+    margin-top: 200px;
+} 
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: center; /* Center items */
+}
+
+.footer ul li {
+    margin: 5px 10px; /* Adjusted spacing for better layout */
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px; /* Adjusted font size for readability */
+}
+
+.footer ul li a:hover {
+    text-decoration: underline; /* Add hover effect */
+}
+/* SOCIAL ICONS  */
+
+.Social-media .icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center
+  }
+  
+  .Social-media .icons a {
+    color: #47ffd7;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Social-media .icons a .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .Social-media .icons a .layer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid hsl(162, 100%, 53%);
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  /*instagram */
+  .Social-media .icons a .layer span.fab {
+  
+  
+    background-color: #52535500;
+    border: 2px solid hsl(19, 100%, 50%);
+    background-size: cover;
+    background-image: url("./images/instaa.png");
+    box-shadow: 2px 2px 2px rgb(238, 103, 126);
+  
+  }
+  /*linkedin */
+  .Social-media .icons a .layer span.linkedin {
+    background-color: #0c2ce4;
+    border: 2px solid hsl(160, 100%, 50%);
+    background-size: cover;
+    background-image: url("./images/lin.png");
+    box-shadow: 2px 2px 2px #0bffde;
+  }
+  /*Github */
+  .Social-media .icons a .layer span.Github {
+    background-color: #484a53;
+    border: 2px solid rgb(255, 255, 255);
+    background-size: cover;
+    background-image: url("./images/github.png");
+    box-shadow: 2px 2px 2px #ffffff;
+  }
+  /*  ROTATE THE ICONS  */
+  /*
+  .Social-media .icons a:hover .layer {
+    transform: rotate(-35deg) skew(20deg);
+    
+  } */
+  
+  .Social-media .icons a:hover .layer span:nth-child(1) {
+    opacity: 1;
+  }
+  
+  .Social-media .icons a:hover .layer span:nth-child(2) {
+    opacity: 1;
+    transform: translate(5px, -5px);
+  }
+  
+  .Social-media .icons a:hover .layer span:nth-child(3) {
+    opacity: 1;
+    transform: translate(10px, -10px);
+  }
+  
+  .Social-media .icons a:hover .layer span:nth-child(4) {
+    opacity: 1;
+    transform: translate(15px, -15px);
+  }
+  /*     layers for icons     */
+  .Social-media .icons .instagram .layer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid hsl(357, 100%, 53%);
+    border-radius: 5px;
+    transition: all 0.3s ease-out-in;
+  }
+  
+  .Social-media .icons .linkedin .layer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid hsl(180, 100%, 50%);
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  .Social-media .icons .Github .layer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 5px;
+    transition: all 0.3s;
+  }

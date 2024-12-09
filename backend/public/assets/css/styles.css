@@ -1,0 +1,75 @@
+/* public/assets/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.login {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login form label {
+    margin-bottom: 5px;
+}
+
+.login form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.login form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login form button:hover {
+    background-color: #555;
+}
+
+.login p {
+    color: red;
+    font-size: 14px;
+}

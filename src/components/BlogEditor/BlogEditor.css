@@ -1,0 +1,146 @@
+.blog-editor {
+    background-color: #f9fffb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   max-width: 900px;
+    margin: 0 auto;
+    max-height: 1000px;
+    font-family: 'Arial', sans-serif;
+}
+
+.blog-editor h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.blog-editor form {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-editor input[type="text"],
+.blog-editor textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.blog-editor input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.blog-editor .ql-container {
+    height: 200px;
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.blog-editor .ql-toolbar {
+    
+    background-color: #cef3f0;
+    border-bottom: none;
+    color:#000000;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0px 2px 3px black ;
+}
+
+.blog-editor .ql-editor {
+    border-radius: 0 0 4px 4px;
+    background-color: #ffffff;
+    color: #000000;
+    height: auto;
+}
+
+.blog-editor button[type="submit"] {
+    background-color: #cef3f0;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.24);
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.blog-editor button[type="submit"]:hover {
+    background-color: #0073e6;
+}
+
+
+.blog-editor .ql-toolbar .ql-formats {
+    color: rgb(0, 0, 0); 
+}
+
+.blog-editor .ql-toolbar .ql-stroke {
+    stroke: rgb(0, 0, 0); 
+}
+
+.blog-editor .ql-toolbar .ql-fill {
+    fill: rgb(0, 0, 0); 
+}
+
+
+
+.blog-editor .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.blog-editor .button-group button {
+    background-color: #cef3f0;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    
+    border-radius: 4px;
+    cursor: pointer;
+    height:fit-content;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.blog-editor .button-group button:hover {
+    background-color: #FDA7DA;
+    border:1px solid black;
+}
+
+
+.draggable-image { display: block; 
+    margin: 0 auto; 
+    cursor: move; 
+    border: 1px dashed #2d3436; /* Border for clarity during dragging */ }
+
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.success-message {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+

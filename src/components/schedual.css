@@ -1,0 +1,23 @@
+.scheduled-publishing {
+    margin-top: 20px;
+}
+
+.scheduled-publishing input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+}
+
+.scheduled-publishing button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #cef3f0;
+    transition: background-color 0.3s;
+}
+
+.scheduled-publishing button:hover {
+    background-color: #0073e6;
+}

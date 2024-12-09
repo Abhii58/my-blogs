@@ -1,0 +1,45 @@
+.footer {
+    background-color: #272928;
+    padding: 20px 0;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.footer-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0073e6;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+/* Add margin to main content to prevent footer overlap */
+.main-content {
+    margin-bottom: 80px; /* Adjust based on your footer height */
+    min-height: calc(100vh - 80px); /* Ensures content fills viewport minus footer height */
+} 

@@ -1,0 +1,54 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 200px; /* Set the max width */
+   
+    margin-left:50px;
+    margin-top: 1px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 8px 10px; /* Compact padding for smaller width */
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: #333;
+    background-color: transparent;
+    min-width: 0; /* Prevent input from exceeding the available space */
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.search-bar button {
+    flex-shrink: 0; /* Prevent the button from shrinking */
+    background-color: #007bff;
+    border: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.search-bar button::before {
+    content: '\1F50D'; /* Unicode for a magnifying glass icon */
+    font-size: 18px;
+}

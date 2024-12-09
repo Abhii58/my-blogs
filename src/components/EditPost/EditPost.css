@@ -1,0 +1,80 @@
+.edit-post-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.edit-post-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.edit-post-modal h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.edit-post-modal .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-post-modal label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.edit-post-modal input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.edit-post-modal .ql-container {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-group button[type="submit"] {
+    background-color: #cef3f0;
+    color: black;
+    border: none;
+}
+
+.button-group button[type="button"] {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+.button-group button:hover {
+    opacity: 0.9;
+}
+.post-list{
+    margin-left: 20%;
+}

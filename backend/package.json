@@ -1,0 +1,21 @@
+{
+  "name": "my-blog-backend",
+  "version": "1.0.0",
+  "description": "Backend for My Blog Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Abhishek Bijalwan",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.21.1",
+    "mongoose": "^5.13.22"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

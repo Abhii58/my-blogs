@@ -1,0 +1,227 @@
+.cms {
+    padding: 20px;
+    background-color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.cms .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    height: auto;
+}
+
+.create-blog {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.cmsMangement {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.cms h1 {
+    margin-bottom: 20px;
+    color: #333;
+    margin-left:20%;
+}
+
+.cms h2 {
+    margin: 20px 0;
+    color: #444;
+    margin-left: 15%;
+}
+
+@media (max-width: 768px) {
+    .cms {
+        padding: 10px;
+    }
+
+    .create-blog,
+    .cmsMangement {
+        padding: 15px;
+    }
+}
+
+.cms input,
+.cms textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.cms button {
+    padding: 10px;
+    background: #cef3f0;
+    color: #020202;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.cms button:hover {
+    background: #bde8e5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cmsMangement > div {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cmsMangement > div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.cms .posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.cms .post {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* Ensure the Quill editor doesn't overflow */
+.blog-editor .ql-container {
+    height: auto;
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+.posts-management{
+    padding: 20px;
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    justify-content: center;
+
+}
+.post-list-container{
+    margin-left: 20%;
+    
+    padding: 15px;
+    border-radius: 8px;
+    width: 60%; /* Add width to ensure visibility */
+    color: rgb(0, 0, 0); /* Add text color since background is dark */
+}
+
+.cms-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cms-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.cms-nav button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cms-nav button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.cms-nav button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.cms-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cms-loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.cms-error {
+    text-align: center;
+    padding: 20px;
+    color: #dc3545;
+    background-color: #f8d7da;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.posts-list {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.posts-list h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.posts-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.posts-list li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.posts-list li:last-child {
+    border-bottom: none;
+}
+
+.posts-list h3 {
+    margin: 0 0 10px 0;
+    color: #007bff;
+}
+
+.posts-list p {
+    margin: 5px 0;
+    color: #666;
+}
+

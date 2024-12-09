@@ -1,0 +1,107 @@
+.comments-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form {
+    margin-bottom: 1.5rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.comment-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: var(--text-color-secondary);
+}
+
+.comment-date {
+    font-size: 0.9rem;
+}
+/* ... existing styles ... */
+
+.login-prompt {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.disabled-textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.login-message {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.login-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: var(--primary-color-dark);
+    text-decoration: none;
+}
+
+.login-message p {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
