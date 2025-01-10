@@ -12,7 +12,9 @@ const CMS = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [activeComponent, setActiveComponent] = useState('editor');
+    const [activeComponent, setActiveComponent] = useState('editor'); // Set default to 'editor'
+    const [selectedPost, setSelectedPost] = useState(null);
+    const [editMode, setEditMode] = useState(false);
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -46,10 +48,28 @@ const CMS = () => {
         fetchPosts();
     }, []);
 
+    useEffect(() => {
+        console.log('Selected Post:', selectedPost);
+    }, [selectedPost]);
+
+    const handleEditButtonClick = () => {
+        setEditMode(true);
+        setActiveComponent('edit-post');
+        setSelectedPost(null); 
+    };
+
+    const handlePostClick = (post) => {
+        if (editMode) {
+            setSelectedPost(post);
+            setEditMode(false);
+            setActiveComponent('editor'); // Ensure the editor opens with the selected post
+        }
+    };
+
     const renderComponent = () => {
         switch (activeComponent) {
             case 'editor':
-                return <BlogEditor />;
+                return <BlogEditor post={selectedPost} />;
             case 'categories':
                 return <CategoryManager />;
             case 'tags':
@@ -60,8 +80,10 @@ const CMS = () => {
                 return <MediaManager />;
             case 'seo':
                 return <SEOTools />;
+            case 'edit-post':
+                return <div>Please select a post to edit</div>; // Indicate that the user should select a post
             default:
-                return <BlogEditor />;
+                return <BlogEditor post={selectedPost} />;
         }
     };
 
@@ -107,6 +129,12 @@ const CMS = () => {
                 >
                     SEO Tools
                 </button>
+                <button
+                    className={activeComponent === 'edit-post' ? 'active' : ''}
+                    onClick={handleEditButtonClick}
+                >
+                    {editMode ? 'Select post to edit' : 'Edit Post'}
+                </button>
             </nav>
 
             <div className="cms-content">
@@ -118,7 +146,17 @@ const CMS = () => {
                     <h2>Recent Posts</h2>
                     <ul>
                         {posts.map(post => (
-                            <li key={post._id}>
+                            <li 
+                                key={post._id} 
+                                tabIndex="0" 
+                                onClick={() => handlePostClick(post)}
+                                onKeyPress={(e) => {
+                                    if (e.key === 'Enter') {
+                                        handlePostClick(post);
+                                    }
+                                }}
+                                style={{ cursor: editMode ? 'pointer' : 'default', padding: '10px', border: '1px solid #ddd', margin: '5px 0' }}
+                            >
                                 <h3>{post.title}</h3>
                                 <p>Status: {post.isDraft ? 'Draft' : 'Published'}</p>
                                 <p>Created: {new Date(post.createdAt).toLocaleDateString()}</p>

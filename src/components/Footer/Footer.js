@@ -4,7 +4,7 @@ import '../layout.css';
 const Footer = () => {
     return (
         <footer className="footer">
-            <p>&copy; 2024 My Blog. All rights reserved.</p>
+             <p>&copy; {new Date().getFullYear()} Abhishek  All rights reserved.</p>
             
                 
              <h1>Social Media</h1>

@@ -6,7 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import ScheduledPublishing from '../ScheduledPublishing';
-import { jwtDecode } from 'jwt-decode';
+import {jwtDecode} from 'jwt-decode';
 import './BlogEditor.css';
 
 // Register Blot for image embedding with drag-and-drop support
@@ -34,13 +34,14 @@ DraggableImageBlot.blotName = 'draggableImage';
 DraggableImageBlot.tagName = 'div';
 Quill.register(DraggableImageBlot);
 
-const BlogEditor = () => {
-    const [content, setContent] = useState('');
-    const [title, setTitle] = useState('');
-    const [tags, setTags] = useState('');
-    const [category, setCategory] = useState('');
-    const [seoMetadata, setSeoMetadata] = useState('');
+const BlogEditor = ({ post }) => {
+    const [content, setContent] = useState(post ? post.content : '');
+    const [title, setTitle] = useState(post ? post.title : '');
+    const [tags, setTags] = useState(post ? post.tags.join(', ') : '');
+    const [category, setCategory] = useState(post ? post.category : '');
+    const [seoMetadata, setSeoMetadata] = useState(post ? post.seoMetadata : '');
     const [error, setError] = useState('');
+    const [message, setMessage] = useState('');
     const { user } = useContext(UserContext);
     const quillRef = useRef(null);
 
@@ -96,6 +97,7 @@ const BlogEditor = () => {
                 setCategory('');
                 setSeoMetadata('');
                 setError('');
+                setMessage('Post saved as draft successfully!');
             }
         } catch (error) {
             console.error('Error creating post:', error);
@@ -156,9 +158,6 @@ const BlogEditor = () => {
             setError(error.response?.data?.message || 'Failed to publish post');
         }
     };
-
-    // Add state for success messages
-    const [message, setMessage] = useState('');
 
     return (
         <DndProvider backend={HTML5Backend}>
