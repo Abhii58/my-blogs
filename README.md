@@ -6,10 +6,13 @@ This is a blogging website where you can create and publish blogs. It is built w
 - Create and publish blog posts
 - User-friendly interface
 - Responsive design
-- SEO optimized
+- SEO optimization
 - Comment section
 - Social media integration
 - About and Contact pages
+- A rich text editor
+- Content Management system(only for admin)
+  
 
 ## Installation
 1. Clone the repository:
