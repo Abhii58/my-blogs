@@ -13,6 +13,7 @@
     padding: 0px;
     border-radius: 12px;
     height: fit-content;
+    
     background: linear-gradient(135deg, #007bff, #6a11cb); /* Gradient background */
     font-family: 'Arial', sans-serif;
 }

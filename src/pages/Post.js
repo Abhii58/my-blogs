@@ -6,6 +6,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import './pages.css';
 import Comments from '../components/Comments/Comments';
+import SocialShare from '../components/SocialShare/SocialShare'; // Import SocialShare component
 
 const Post = () => {
     const { postId } = useParams();
@@ -22,6 +23,7 @@ const Post = () => {
                 const response = await axios.get(`/posts/${postId}`);
                 console.log('Fetched post:', response.data);
                 setPost(response.data);
+                console.log('Allow comments:', response.data.allowComments); // Log the allowComments value
                 setLoading(false);
             } catch (err) {
                 console.error('Error fetching post:', err);
@@ -71,7 +73,7 @@ const Post = () => {
                     <div className="post-meta">
                         <span className="post-author">By {post.author}</span>
                         <span className="post-date">
-                            {new Date(post.date).toLocaleDateString()}
+                            {new Date(post.createdAt).toLocaleDateString()}
                         </span>
                     </div>
                     {post.image && (
@@ -85,6 +87,8 @@ const Post = () => {
                         className="post-body"
                         dangerouslySetInnerHTML={{ __html: post.content }}
                     />
+                    
+                    <SocialShare url={window.location.href} title={post.title} /> {/* Add SocialShare component */}
                     
                     {showLoginPrompt && !user && (
                         <div className="login-prompt">

@@ -1,107 +1,158 @@
+/* Comment.css */
+
 .comments-section {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: var(--card-bg);
+    background-color: #f9f9f9;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.comment-form {
-    margin-bottom: 1.5rem;
+.comments-section h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.comment-form textarea {
+.comment-form, .reply-form {
+    margin-bottom: 20px;
+}
+
+.comment-form textarea, .reply-form textarea {
     width: 100%;
-    min-height: 100px;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
 }
 
-.comment-form button {
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: white;
+.comment-form button, .reply-form button {
+    background-color: #007bff;
+    color: #fff;
     border: none;
+    padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 0.9em;
 }
 
-.comment-form button:hover {
-    background-color: var(--primary-color-dark);
+.comment-form button:hover, .reply-form button:hover {
+    background-color: #0056b3;
 }
 
-.comments-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.cancel-btn {
+    background-color: #6c757d;
+}
+
+.cancel-btn:hover {
+    background-color: #5a6268;
 }
 
 .comment {
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-}
-
-.comment:last-child {
-    border-bottom: none;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .comment-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
-    color: var(--text-color-secondary);
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-header strong {
+    font-size: 1em;
+    color: #007bff;
 }
 
 .comment-date {
-    font-size: 0.9rem;
+    font-size: 0.8em;
+    color: #666;
 }
-/* ... existing styles ... */
 
-.login-prompt {
-    margin-bottom: 1.5rem;
+.comment p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.comment-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reaction-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.reaction-btn {
+    background: none;
+    border: none;
     cursor: pointer;
+    font-size: 1em;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.reaction-btn:hover {
+    color: #007bff;
+}
+
+.reaction-btn.active {
+    color: #007bff;
+}
+
+.reply-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #007bff;
+}
+
+.reply-btn:hover {
+    text-decoration: underline;
 }
 
 .disabled-textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    padding: 10px;
     border-radius: 4px;
-    background-color: #f5f5f5;
-    cursor: pointer;
+    width: 100%;
+    resize: none;
+    font-family: Arial, sans-serif;
 }
 
 .login-message {
     text-align: center;
-    padding: 1rem;
-    background-color: #f8f8f8;
-    border-radius: 4px;
-    border: 1px solid #ddd;
 }
 
 .login-link {
     display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
 .login-link:hover {
-    background-color: var(--primary-color-dark);
-    text-decoration: none;
+    background-color: #218838;
 }
 
-.login-message p {
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
+.comments-list {
+    margin-top: 20px;
 }

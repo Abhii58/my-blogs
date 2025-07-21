@@ -1,0 +1,47 @@
+.social-share {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.social-share h4 {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.share-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.share-button:hover {
+  opacity: 0.9;
+}
+
+.twitter {
+  background-color: #1DA1F2;
+}
+
+.facebook {
+  background-color: #4267B2;
+}
+
+.linkedin {
+  background-color: #0077B5;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}

@@ -17,24 +17,20 @@ const Header = ({ onLogout }) => {
     return (
         <header className="header">
             <h1>Blog.ab</h1>
-            
-           {/*   <SearchBar onSearch={null} />Add your search handler here */}
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                    {isAdmin && <li><Link to="/cms">CMS</Link></li>} {/* Conditionally render CMS link */}
+                    {isAdmin && <li><Link to="/cms">CMS</Link></li>}
                     {user ? (
-                        <li><Link to="/" onClick={onLogout}>Logout</Link></li>
+                        <>
+                            <li><Link to="/profile">Profile</Link></li>
+                            <li><Link to="/" onClick={onLogout}>Logout</Link></li>
+                        </>
                     ) : (
                         <li><Link to="/login">Login</Link></li>
                     )}
-                   {/* <li>
-                        <button onClick={toggleTheme} className="theme-toggle">
-                            🌓 
-                        </button>
-                    </li>*/} 
                 </ul>
             </nav>
         </header>

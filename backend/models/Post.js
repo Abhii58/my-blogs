@@ -1,15 +1,15 @@
-// models/Post.js
-
 const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
+        trim: true,
     },
     content: {
         type: String,
         required: true,
+        trim: true,
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
@@ -18,19 +18,29 @@ const postSchema = new mongoose.Schema({
     },
     authorName: {
         type: String,
-        default: 'Anonymous'
+        default: 'Anonymous',
+        trim: true
     },
     category: {
         type: String,
-        default: 'Uncategorized'
-    },
-    tags: [{
-        type: String,
+        default: 'Uncategorized',
         trim: true
-    }],
+    },
+    tags: {
+        type: [{
+            type: String,
+            trim: true
+        }],
+        default: [],
+        validate: {
+            validator: Array.isArray,
+            message: 'Tags should be an array'
+        }
+    },
     seoMetadata: {
         type: String,
-        default: ''
+        default: '',
+        trim: true
     },
     isDraft: {
         type: Boolean,
@@ -38,9 +48,24 @@ const postSchema = new mongoose.Schema({
     },
     publishedAt: {
         type: Date
-    }
+    },
+    comments: {
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Comment'
+        }],
+        default: [],
+        validate: {
+            validator: Array.isArray,
+            message: 'Comments should be an array'
+        }
+    } 
 }, {
-    timestamps: true
+    timestamps: true,
+    versionKey: false 
 });
 
 module.exports = mongoose.model('Post', postSchema);
+
+// Adding validation for arrays to ensure they are not null.
+// Exporting the Post model so it can be used in other parts of the application.

@@ -4,13 +4,17 @@
         "title": "First Blog Post",
         "content": "This is the content of the first blog post.",
         "author": "Author One",
-        "date": "2023-11-25T00:00:00Z"
+        "date": "2023-11-25T00:00:00Z",
+        "allowComments": true,
+        "comments": []
     },
     {
         "id": "2",
         "title": "Second Blog Post",
         "content": "This is the content of the second blog post.",
         "author": "Author Two",
-        "date": "2023-11-26T00:00:00Z"
+        "date": "2023-11-26T00:00:00Z",
+        "allowComments": true,
+        "comments": []
     }
 ]
