@@ -23,7 +23,7 @@ Tag and category selection
 Search bar functionality
 SEO & Metadata
 
-SEO-friendly URLs (e.g., www.yourwebsite.com/blog-post-title)
+SEO-friendly URLs ((https://blogs-for-u.netlify.app/)
 Metadata fields: title, description, keywords
 Integration
 
